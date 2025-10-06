@@ -53,3 +53,35 @@ header {
     width: max-content;
   }
 }
+
+.section-title {
+  position: relative;
+  width: max-content;
+}
+
+.section-title span {
+  position: absolute;
+  transform: rotate(87.42deg);
+  right: 2%;
+}
+
+.services_container {
+  width: 100%;
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(260px, 60%, 360px), 1fr)
+  );
+  gap: 1rem;
+}
+
+.service_img {
+  width: 50px;
+  height: 50px;
+}
+
+.service_note {
+  color: var(--primary-color-700);
+  font-size: 0.9rem;
+}

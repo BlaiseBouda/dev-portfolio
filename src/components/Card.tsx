@@ -1,19 +1,19 @@
 type CardProps = {
   padding?: string;
   radius?: string;
-  hover?: boolean;
+  hasHover?: boolean;
   children: React.ReactNode;
 };
 
 export default function Card({
   padding = "1em",
   radius,
-  hover,
+  hasHover,
   children,
 }: CardProps) {
   return (
     <div
-      className={hover ? "card has-hover" : "card"}
+      className={hasHover ? "card has-hover" : "card"}
       style={{ padding: padding, borderRadius: radius }}
     >
       {children}

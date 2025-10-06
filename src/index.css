@@ -11,9 +11,10 @@
   --primary-color-400: #d9d9d9;
   --primary-color-100: #f4f8f5;
   --transition: all 0.3s ease-in-out;
+  --max-width: 1200px;
 
   font-family: "Questrial", system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color-100);
   color: var(--primary-color-900);
   line-height: 1.5;
   font-weight: 400;
@@ -23,6 +24,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+html {
+  scroll-behavior: smooth;
+  width: 100% !important;
+  overflow-x: hidden;
 }
 
 .dd {
@@ -84,6 +90,25 @@
   opacity: 0.6;
   text-decoration: underline;
   transition: var(--transition);
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 2.4rem);
+  line-height: 1.2;
+}
+
+section {
+  padding: 1em;
+  margin: auto;
+  width: max-content;
+}
+
+.space-section {
+  padding-top: 6rem;
+}
+
+.pt-6 {
+  padding-top: 6rem;
 }
 
 .unbounded-400 {
