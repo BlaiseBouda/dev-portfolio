@@ -50,7 +50,7 @@ export default function Services() {
       <SectionTitle>
         Qu’est ce que je veux <br /> faire pour vous ?
       </SectionTitle>
-      <div className="services_container pt-6">
+      <div className="section_container services_container pt-6">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}

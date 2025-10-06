@@ -81,6 +81,10 @@ html {
 }
 
 .btn-link {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   text-decoration: none;
   color: var(--primary-color-900);
   transition: var(--transition);
@@ -89,6 +93,10 @@ html {
 .btn-link:hover {
   opacity: 0.6;
   text-decoration: underline;
+}
+
+.btn-link:hover svg {
+  transform: translateX(4px);
   transition: var(--transition);
 }
 
@@ -104,7 +112,14 @@ section {
 }
 
 .space-section {
-  padding-top: 6rem;
+  padding-top: 8rem;
+}
+
+.section_container {
+  width: 100%;
+  max-width: var(--max-width);
+  display: grid;
+  gap: 1rem;
 }
 
 .pt-6 {
