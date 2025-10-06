@@ -85,3 +85,15 @@ header {
   color: var(--primary-color-700);
   font-size: 0.9rem;
 }
+
+.philosophy_container {
+  width: 100%;
+  max-width: var(--max-width);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.philosophy_container h1 {
+  color: var(--primary-color-400);
+}
