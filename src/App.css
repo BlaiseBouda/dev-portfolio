@@ -103,3 +103,47 @@ header {
   color: var(--primary-color-700);
   font-size: 0.8rem;
 }
+
+.call_to_action {
+  position: relative;
+  background-color: white;
+  padding: 4rem;
+  text-align: center;
+  border: 1px solid var(--primary-color-900);
+}
+
+.call_to_action .cta-btn {
+  margin: auto;
+  position: relative;
+}
+
+.call_to_action .arrow {
+  position: absolute;
+  left: -50%;
+  bottom: -24;
+}
+
+footer {
+  background-color: white;
+}
+
+.footer_container {
+  padding: 2rem;
+  text-align: center;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.footer_container .btn-link {
+  color: var(--primary-color-900);
+  display: inline-flex;
+}
+
+.footer_container svg:hover {
+  opacity: 0.4;
+  transition: var(--transition);
+}
