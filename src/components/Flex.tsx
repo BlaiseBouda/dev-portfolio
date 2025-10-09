@@ -3,6 +3,7 @@ type StackProps = {
   direction?: "row" | "column";
   center?: boolean;
   between?: boolean;
+  wrap?: boolean;
   children: React.ReactNode;
 };
 
@@ -11,6 +12,7 @@ export default function Flex({
   direction = "row",
   center = false,
   between = false,
+  wrap = false,
   children,
 }: StackProps) {
   return (
@@ -21,6 +23,7 @@ export default function Flex({
         flexDirection: direction,
         alignItems: center ? "center" : "",
         justifyContent: between ? "space-between" : "",
+        flexWrap: wrap ? "wrap" : "nowrap",
       }}
     >
       {children}

@@ -1,4 +1,3 @@
-import Flex from "../components/Flex";
 import Facebook from "../components/icons/Facebook";
 import Linkedin from "../components/icons/Linkedin";
 
@@ -8,6 +7,10 @@ export default function Footer() {
       <div className="space-section"></div>
       <footer className="text-gray">
         <div className="footer_container">
+          <div className="media_link">
+            <Linkedin />
+            <Facebook />
+          </div>
           <div>
             Design par{" "}
             <a className="btn-link" href="#">
@@ -18,10 +21,6 @@ export default function Footer() {
               @blaisebouda
             </a>
           </div>
-          <Flex>
-            <Linkedin />
-            <Facebook />
-          </Flex>
         </div>
       </footer>
     </>

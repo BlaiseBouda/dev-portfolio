@@ -1,4 +1,3 @@
-import Card from "../components/Card";
 import { SectionTitle } from "../components/SectionTitle";
 import Flex from "../components/Flex";
 
@@ -46,7 +45,7 @@ export default function Philosophy() {
 
 function CardPhilosophy(philosophy: Philosophy) {
   return (
-    <Card padding="2rem" radius="2rem">
+    <div className="card">
       <Flex gap="2rem" center between>
         <Flex direction="column">
           <h3 className="unbounded">{philosophy.title}</h3>
@@ -54,6 +53,6 @@ function CardPhilosophy(philosophy: Philosophy) {
         </Flex>
         <h1 className="steper unbounded">{philosophy.steper}</h1>
       </Flex>
-    </Card>
+    </div>
   );
 }

@@ -8,7 +8,7 @@ export default function CallToAction() {
         <Flex direction="column" gap="2rem">
           <div>
             <h1>Avez vous un Projet ?</h1>
-            <p className="text-gray">
+            <p style={{ paddingTop: ".5rem" }} className="text-gray">
               Je suis disponible pour une mission freelance ou un contrat
               CDD/CDI.
             </p>

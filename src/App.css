@@ -35,23 +35,14 @@ header {
 }
 
 .hero_container .desc {
-  max-width: 420px;
+  max-width: 460px;
 }
 
 .hero_container span {
   background-color: var(--primary-color-400);
   padding: 0.1rem 0.3rem;
   border-radius: 99px;
-}
-
-@media (width > 768px) {
-  .hero_container {
-    text-align: left;
-    flex-direction: row;
-    gap: 3rem;
-    margin: auto;
-    width: max-content;
-  }
+  font-size: 1rem;
 }
 
 .section-title {
@@ -59,10 +50,16 @@ header {
   width: max-content;
 }
 
+.section-title span img {
+  width: 45px;
+  height: 55px;
+}
+
 .section-title span {
   position: absolute;
   transform: rotate(87.42deg);
-  right: 2%;
+  right: 0%;
+  top: 60%;
 }
 
 .services_container {
@@ -84,7 +81,25 @@ header {
 }
 
 .philosophy_container {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(260px, 60%, 400px), 1fr)
+  );
+}
+
+.philosophy_container .card {
+  padding: 1.2rem;
+  border-radius: 2rem;
+}
+
+.philosophy_container .card p {
+  max-width: 600px;
+}
+
+@media (width > 868px) {
+  .philosophy_container .card:last-child {
+    grid-column: auto / span 2;
+  }
 }
 
 .philosophy_container h1 {
@@ -93,7 +108,10 @@ header {
 
 .contributions_container {
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(260px, 60%, 400px), 1fr)
+  );
 }
 
 .techology {
@@ -107,7 +125,7 @@ header {
 .call_to_action {
   position: relative;
   background-color: white;
-  padding: 4rem;
+  padding: max(1rem, 6vw);
   text-align: center;
   border: 1px solid var(--primary-color-900);
 }
@@ -118,9 +136,7 @@ header {
 }
 
 .call_to_action .arrow {
-  position: absolute;
-  left: -50%;
-  bottom: -24;
+  display: none;
 }
 
 footer {
@@ -132,10 +148,12 @@ footer {
   text-align: center;
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: start;
   max-width: 900px;
   margin: auto;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .footer_container .btn-link {
@@ -143,7 +161,56 @@ footer {
   display: inline-flex;
 }
 
+.footer_container .media_link {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .footer_container svg:hover {
   opacity: 0.4;
   transition: var(--transition);
+}
+
+.show_contenair {
+  max-width: 700px;
+  margin: auto;
+}
+
+.show_contenair ul {
+  padding-left: 1.8rem;
+  display: grid;
+  row-gap: 0.4rem;
+}
+
+.show_contenair .title {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (width > 768px) {
+  .hero_container {
+    text-align: left;
+    flex-direction: row;
+    gap: 3rem;
+    margin: auto;
+    width: max-content;
+  }
+
+  .call_to_action .arrow {
+    display: block;
+    position: absolute;
+    left: -50%;
+    top: 50%;
+  }
+
+  .section-title span img {
+    width: 60px;
+    height: 75px;
+  }
+
+  .philosophy_container .card {
+    padding: 2rem;
+  }
 }

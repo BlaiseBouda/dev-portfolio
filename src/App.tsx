@@ -10,10 +10,12 @@ function App() {
   return (
     <>
       <Hero />
-      <Services />
-      <Philosophy />
-      <Contributions />
-      <CallToAction />
+      <main>
+        <Services />
+        <Philosophy />
+        <Contributions />
+        <CallToAction />
+      </main>
       <Footer />
     </>
   );
