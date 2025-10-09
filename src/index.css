@@ -85,6 +85,7 @@ html {
   text-decoration: none;
   color: var(--primary-color-900);
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .btn-link:hover {
@@ -92,7 +93,7 @@ html {
   text-decoration: underline;
 }
 
-.btn-link:hover svg {
+.btn-link.rigth:hover svg {
   transform: translateX(4px);
   transition: var(--transition);
 }
@@ -151,17 +152,6 @@ main {
   animation: scaleIn 0.25s ease forwards;
 }
 
-.close-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  rigth: 0;
-  top: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 .close-btn:hover {
   opacity: 0.5;
 }
@@ -186,6 +176,16 @@ main {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  gap: 0.5 rem;
+}
+
+svg {
+  color: inherit;
 }
 
 .unbounded-400 {

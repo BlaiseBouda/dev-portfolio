@@ -189,6 +189,11 @@ footer {
   gap: 1rem;
 }
 
+.show_contenair .nav {
+  padding: 4rem 0;
+  color: var(--primary-color-700);
+}
+
 @media (width > 768px) {
   .hero_container {
     text-align: left;

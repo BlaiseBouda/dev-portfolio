@@ -5,6 +5,7 @@ import { SectionTitle } from "../components/SectionTitle";
 import RightArrow from "../components/icons/RightArrow";
 import { contributions, type Contribution } from "./contribution";
 import Modal from "../components/Modal";
+import ChevronLeft from "../components/icons/ChevronLeft";
 
 export default function Contributions() {
   const [open, setOpen] = useState(false);
@@ -23,24 +24,14 @@ export default function Contributions() {
             <button
               onClick={() => setOpen(false)}
               aria-label="Fermer la fenêtre"
-              className="close-btn"
+              className="btn-link"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="m15 18-6-6 6-6" />
-              </svg>
+              <ChevronLeft />
               <span>Revenir en arrière</span>
             </button>
-            {contribution && <Show contribution={contribution} />}
+            {contribution && (
+              <Show contribution={contribution} onShow={onShow} />
+            )}
           </div>
         </main>
       </Modal>
@@ -79,7 +70,7 @@ function ContributionCard({
           <p>{contribution.short_description}</p>
           <Technologies technologies={contribution.technologies} />
         </Flex>
-        <button onClick={() => onShow(contribution)} className="btn-link">
+        <button onClick={() => onShow(contribution)} className="btn-link rigth">
           Voir le projet
           <RightArrow />
         </button>
@@ -100,7 +91,13 @@ function Technologies({ technologies }: { technologies: string[] }) {
   );
 }
 
-function Show({ contribution }: { contribution: Contribution }) {
+function Show({
+  contribution,
+  onShow,
+}: {
+  contribution: Contribution;
+  onShow: (contribution: Contribution) => void;
+}) {
   const desc = contribution.description;
 
   return (
@@ -142,6 +139,41 @@ function Show({ contribution }: { contribution: Contribution }) {
           </ul>
         </Flex>
       </Flex>
+      <div className="nav">
+        <NavigationContribution contribution={contribution} onShow={onShow} />
+      </div>
     </div>
+  );
+}
+
+function NavigationContribution({
+  contribution,
+  onShow,
+}: {
+  contribution: Contribution;
+  onShow: (contribution: Contribution) => void;
+}) {
+  const next = contributions.find((c) => c.id === contribution.id + 1);
+  const prev = contributions.find((c) => c.id === contribution.id - 1);
+
+  return (
+    <Flex gap=".5rem" between>
+      {prev && (
+        <Flex direction="column" gap=".2rem">
+          <button className="btn-link" onClick={() => onShow(prev)}>
+            Projet précédent
+          </button>
+          <h4 className="unbounded">{prev.title}</h4>
+        </Flex>
+      )}
+      {next && (
+        <Flex direction="column" gap=".2rem">
+          <button className="btn-link" onClick={() => onShow(next)}>
+            Projet suivant
+          </button>
+          <h4 className="unbounded">{next.title}</h4>
+        </Flex>
+      )}
+    </Flex>
   );
 }
