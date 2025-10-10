@@ -47,10 +47,10 @@ const services: Service[] = [
 export default function Services() {
   return (
     <section id="services" className="space-section">
-      <SectionTitle>
+      <SectionTitle className="md-hidden">
         Qu’est ce que je veux <br /> faire pour vous ?
       </SectionTitle>
-      <div className="section_container services_container pt-6">
+      <div className="section_container services_container top-space">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}

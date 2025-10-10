@@ -9,7 +9,7 @@ interface RevealProps {
 
 export default function Reveal({
   children,
-  threshold = 0.3,
+  threshold = 0.5,
   className = "",
 }: RevealProps) {
   const [isVisible, setIsVisible] = useState(false);

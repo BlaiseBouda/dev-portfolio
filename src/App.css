@@ -34,6 +34,10 @@ header {
   gap: 1rem;
 }
 
+.hero_container h1 {
+  font-size: clamp(2rem, 10vw, 3rem);
+}
+
 .hero_container .desc {
   max-width: 460px;
 }
@@ -194,6 +198,10 @@ footer {
   color: var(--primary-color-700);
 }
 
+.md-hidden {
+  display: none;
+}
+
 @media (width > 768px) {
   .hero_container {
     text-align: left;
@@ -217,5 +225,21 @@ footer {
 
   .philosophy_container .card {
     padding: 2rem;
+  }
+
+  .contributions_container .card {
+    padding: 1.5rem;
+  }
+
+  .space-section {
+    padding-top: 8rem;
+  }
+
+  .top-space {
+    padding-top: 6rem;
+  }
+
+  .md-hidden {
+    display: block;
   }
 }

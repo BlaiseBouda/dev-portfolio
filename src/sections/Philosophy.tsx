@@ -34,7 +34,7 @@ export default function Philosophy() {
       <SectionTitle>
         Ma philosophie <br /> de travail
       </SectionTitle>
-      <div className="section_container philosophy_container pt-6">
+      <div className="section_container philosophy_container top-space">
         {philosophies.map((philosophy, index) => (
           <CardPhilosophy key={index} {...philosophy} />
         ))}

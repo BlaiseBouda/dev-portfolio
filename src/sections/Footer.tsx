@@ -8,7 +8,9 @@ export default function Footer() {
       <footer className="text-gray">
         <div className="footer_container">
           <div className="media_link">
-            <Linkedin />
+            <a href="https://linkedin.com/in/blaisebouda">
+              <Linkedin />
+            </a>
             <Facebook />
           </div>
           <div>

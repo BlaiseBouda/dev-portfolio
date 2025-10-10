@@ -19,7 +19,7 @@ export default function Contributions() {
   return (
     <>
       <Modal isOpen={open} onClose={() => setOpen(false)}>
-        <main>
+        <main id="modal">
           <div className="show_contenair">
             <button
               onClick={() => setOpen(false)}
@@ -41,7 +41,7 @@ export default function Contributions() {
         <SectionTitle>
           Explorez mes top <br /> contributions
         </SectionTitle>
-        <div className="section_container contributions_container pt-6">
+        <div className="section_container contributions_container top-space">
           {contributions.map((contribution, index) => (
             <ContributionCard
               key={index}
@@ -63,8 +63,8 @@ function ContributionCard({
   onShow: (contribution: Contribution) => void;
 }) {
   return (
-    <Card padding="1.5rem" hasHover>
-      <Flex gap="1.5rem" direction="column">
+    <Card padding="1.2rem" hasHover>
+      <Flex gap="1.2rem" direction="column">
         <img src={contribution.cover} alt="screenshot" />
         <h3 className="unbounded">{contribution.title}</h3>
         <Flex gap=".5rem" direction="column">
@@ -161,17 +161,17 @@ function NavigationContribution({
     <Flex wrap between>
       {prev && (
         <Flex direction="column" gap=".2rem">
-          <button className="btn-link" onClick={() => onShow(prev)}>
+          <a href="#modal" className="btn-link" onClick={() => onShow(prev)}>
             Projet précédent
-          </button>
+          </a>
           <h4 className="unbounded">{prev.title}</h4>
         </Flex>
       )}
       {next && (
         <Flex direction="column" gap=".2rem">
-          <button className="btn-link" onClick={() => onShow(next)}>
+          <a href="#modal" className="btn-link" onClick={() => onShow(next)}>
             Projet suivant
-          </button>
+          </a>
           <h4 className="unbounded">{next.title}</h4>
         </Flex>
       )}

@@ -11,7 +11,9 @@ export default function Hero() {
           <a className="btn-link" href="#contributions">
             Contributions
           </a>
-          <button className="cta-btn">Me contacter</button>
+          <a href="#call-to-action" className="cta-btn">
+            Me contacter
+          </a>
         </Flex>
       </header>
 

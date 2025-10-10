@@ -15,7 +15,7 @@ export default function CallToAction() {
                 CDD/CDI.
               </p>
             </div>
-            <a href="mailto:issiaka@issiaka.com" className="cta-btn">
+            <a href="mailto:blaisebouda05@gmail.com" className="cta-btn">
               Discutons ensemble
               <span className="arrow">
                 <img src={arrow} width={60} height={75} alt="arrow" />

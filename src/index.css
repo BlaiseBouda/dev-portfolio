@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: inherit;
+  color: inherit;
 }
 
 :root {
@@ -117,17 +118,14 @@ main {
   max-width: var(--max-width);
 }
 
-.space-section {
-  padding-top: 8rem;
+.space-section,
+.top-space {
+  padding-top: 4rem;
 }
 
 .section_container {
   display: grid;
   gap: 1rem;
-}
-
-.pt-6 {
-  padding-top: 6rem;
 }
 
 .modal-overlay {
@@ -156,7 +154,7 @@ main {
   opacity: 0.5;
 }
 .modal-body {
-  margin-top: 1rem;
+  padding-top: 2rem;
 }
 
 @keyframes fadeIn {
