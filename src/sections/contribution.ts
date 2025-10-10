@@ -1,3 +1,8 @@
+import ypay from "../assets/projects/ypay.jpg";
+import gpharma from "../assets/projects/gpharma.jpg";
+import unionhalal from "../assets/projects/unionhalal.jpg";
+import portfolio from "../assets/projects/portfolio.jpg";
+
 export type Contribution = {
   id: number;
   cover: string;
@@ -8,8 +13,6 @@ export type Contribution = {
     context?: string;
     contributions: string[];
     technologies: string[];
-    next?: number;
-    prev?: number;
     visit_link?: string;
   };
   technologies: string[];
@@ -18,7 +21,7 @@ export type Contribution = {
 export const contributions: Contribution[] = [
   {
     id: 1,
-    cover: "fdf",
+    cover: ypay,
     title: "Solution de paiement",
     short_description:
       "Développement d’une solution de paiement sécurisée en interne chez Ytech.",
@@ -37,14 +40,13 @@ export const contributions: Contribution[] = [
         "Swagger → Documentation claire et interactive des endpoints API.",
         "Filament PHP → Panneau d’administration moderne et intuitif.",
       ],
-      next: 2,
       visit_link: "https://ypay.ytech-bf.com/",
     },
     technologies: ["Laravel", "Swagger", "API"],
   },
   {
     id: 2,
-    cover: "fdf",
+    cover: gpharma,
     title: "Gestion de pharmacie",
     short_description:
       "Intégration et développement d’une application desktop moderne de gestion de pharmacie.",
@@ -67,14 +69,12 @@ export const contributions: Contribution[] = [
         "Electron.js → Packaging en application desktop multiplateforme.",
         "GitHub Actions → Intégration continue et automatisation des déploiements.",
       ],
-      next: 3,
-      prev: 1,
     },
     technologies: ["VueJs", "Pinia", "TailwindCSS", " Electron Js"],
   },
   {
     id: 3,
-    cover: "dffd",
+    cover: unionhalal,
     title: "Union Halal",
     short_description:
       "Conception UI/UX et développement de l’API en Laravel pour une application de rencontre 100% Halal.",
@@ -93,23 +93,32 @@ export const contributions: Contribution[] = [
         "Laravel → Développement du backend robuste et évolutif.",
         "Swagger → Documentation claire et interactive de l’API.",
       ],
-      next: 4,
-      prev: 2,
     },
     technologies: ["Laravel", "Swagger", "Figma"],
   },
   {
     id: 4,
-    cover: "dfdf",
+    cover: portfolio,
     title: "Landing Page – Portfolio",
     short_description:
-      "Intégration d’une landing page moderne regroupant mes principales réalisations en design",
+      "Intégration d’une landing page moderne regroupant mes principales réalisations en design.",
     description: {
-      more_desc: "",
-      contributions: [],
-      technologies: [],
-      prev: 4,
+      more_desc:
+        "Intégration d’une landing page moderne regroupant mes principales réalisations en design.",
+      context:
+        "Passionné par le design, j’ai conçu cette page comme un espace d’expression et d’apprentissage. Elle marque une nouvelle étape dans mon parcours : approfondir mes compétences UI/UX et évoluer vers ma vision à long terme est de devenir Product Designer.",
+      contributions: [
+        "Réalisation du market design complet sur Figma (charte graphique, écrans et interactions).",
+        "Intégration frontend en React avec une structure réactive et fluide.",
+        "Animations dynamiques avec ReactBits pour renforcer l’engagement et la convivialité.",
+      ],
+      technologies: [
+        "React → Développement d’une interface réactive et performante.",
+        "TailwindCSS → Mise en page responsive et design épuré.",
+        "ReactBits → Création d’animations légères et interactives.",
+        "Figma → Conception du design system et des maquettes haute-fidélité.",
+      ],
     },
-    technologies: ["React", "CSS", "TypeScript", "Figma"],
+    technologies: ["React", "TailwinCSS", "TypeScript", "Figma"],
   },
 ];

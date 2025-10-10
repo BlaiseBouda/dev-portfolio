@@ -25,6 +25,7 @@ export default function Contributions() {
               onClick={() => setOpen(false)}
               aria-label="Fermer la fenêtre"
               className="btn-link"
+              style={{ paddingBottom: "1rem" }}
             >
               <ChevronLeft />
               <span>Revenir en arrière</span>
@@ -123,7 +124,7 @@ function Show({
           )}
         </Flex>
         <Flex gap=".5rem" direction="column">
-          <h3 className="unbounded">Contributions</h3>
+          <h3 className="unbounded">Mes contributions</h3>
           <ul>
             {desc.contributions.map((contribution, index) => (
               <li key={index}> {contribution}</li>

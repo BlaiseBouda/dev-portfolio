@@ -1,5 +1,5 @@
 import Flex from "../components/Flex";
-import profileImg from "../assets/profile.jpeg";
+import profileImg from "../assets/profile.jpg";
 
 export default function Hero() {
   return (
