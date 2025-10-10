@@ -158,7 +158,7 @@ function NavigationContribution({
   const prev = contributions.find((c) => c.id === contribution.id - 1);
 
   return (
-    <Flex gap=".5rem" between>
+    <Flex wrap between>
       {prev && (
         <Flex direction="column" gap=".2rem">
           <button className="btn-link" onClick={() => onShow(prev)}>

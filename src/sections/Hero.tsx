@@ -1,5 +1,6 @@
 import Flex from "../components/Flex";
 import profileImg from "../assets/profile.jpg";
+import Reveal from "../components/Reveal";
 
 export default function Hero() {
   return (
@@ -16,7 +17,9 @@ export default function Hero() {
 
       <div className="hero_container">
         <Flex direction="column">
-          <p className="unbounded text-gray">Welcome 👋 je suis</p>
+          <Reveal>
+            <p className="unbounded text-gray">Welcome 👋 je suis</p>
+          </Reveal>
           <h1 className="unbounded">Blaise Bouda</h1>
           <p className="desc text-lg">
             Développeur Fullstack <span>+5 ans</span> d’expérience et avec{" "}
